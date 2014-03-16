@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>3D Scanning Experiment</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            video,
+            canvas {
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                border: 1px solid black;
+                min-width: 480px;
+                box-sizing: border-box;
+            }
+            video { top: 0; right: 0; display: none; }
+            #canvas1 { top: 0; left: 0; width: 100%; height: 50%;}
+            #canvas2 { top: 50%; left: 0%; width: 50%; height: 50%; }
+            #container canvas { top: 50%; left: 50%; width: 50%; height: 50%; }
+        </style>
+    </head>
+    <body>
+
+        <video id="video" autoplay="true"></video>
+        <canvas id="canvas1"></canvas>
+        <canvas id="canvas2"></canvas>
+		<div id="container"></div>
+
+        <script type="text/javascript" src="dat.gui.min.js"></script>
+
+        <script type="text/javascript" src="threejs/build/three.min.js"></script>
+		<script src="threejs/examples/js/controls/TrackballControls.js"></script>
+		<script src="threejs/examples/js/Detector.js"></script>
+
+        <script type="text/javascript" src="helpers.js"></script>
+        <script type="text/javascript" src="StackBlur.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="heightmap.js"></script>
+
+    </body>
+</html>
+
